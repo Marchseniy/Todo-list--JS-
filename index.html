@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List</title>
+    <link href="css/style.css" rel="stylesheet">
+    <script src="js/main.js" defer></script>
+</head>
+<body>
+    <div class="wrapper">
+        <form onsubmit="clickAddButton(); return false;" class="todo">
+            <div class="todo__main-panel">
+                <p class="todo__description">Введите задачу:</p>
+                <input class="todo__input" type="text" placeholder="Текст задачи" data-todo-input>
+                <button class="todo__add-btn" type="submit" data-todo-add-btn>Добавить</button>
+            </div>
+            <h2 class="todo__tasks-header">Задачи</h2>
+            <ul class="todo__container" data-todo-container>
+                
+            </ul>
+        </form>
+    </div>
+</body>
+</html>

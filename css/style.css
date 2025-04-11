@@ -1,0 +1,99 @@
+@import url("reset.css");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+    font-family: "Montserrat", sans-serif;
+    font-weight: normal;
+    color: #fff;
+}
+
+body {
+    background-color: #1f1f1f;
+}
+
+.wrapper {
+    padding: 0 10px;
+}
+
+.todo {
+    margin: 50px auto;
+    max-width: 700px;
+    padding: 20px;
+    border-radius: 5px;
+    border: 2px solid #999999;
+    background-color: #1a1a1a;
+}
+
+.todo__main-panel {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.todo__description {
+    white-space: nowrap;
+}
+
+.todo__container-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 7px 20px;
+    border-radius: 5px;
+    background-color: #242424;
+}
+
+.todo__container-item-text {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    min-width: 0;
+    margin-right: 10px;
+}
+
+.todo__tasks-header {
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.todo__input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 3px;
+    background-color: #353535;
+}
+
+.todo__add-btn {
+    padding: 10px 20px;
+    border-radius: 3px;
+    background-color: #005ec9;
+    border: none;
+    cursor: pointer;
+}
+
+.todo__add-btn:hover {
+    background-color: #0066da;
+}
+
+.todo__container-delete-btn {
+    padding: 5px;
+    border-radius: 3px;
+    background-color: #333333;
+}
+
+.todo__container-delete-btn:hover {
+    background-color: #3b3b3b;
+}
+
+.todo__container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.todo__input::placeholder {
+    color: #686868;
+}
