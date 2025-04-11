@@ -1,17 +1,12 @@
+import { setLocalStorageItem, getLocalStorageItem } from './utils.js';
+
 const input = document.querySelector('[data-todo-input]');
 const addBtn = document.querySelector('[data-todo-add-btn]');
 const container = document.querySelector('[data-todo-container]');
+const form = document.querySelector('[data-todo-form]')
 
-const keyName = 'todoItems'
-const todoItems = getLocalStorageItem() || []
-
-function setLocalStorageItem(key = keyName, value) {
-    localStorage.setItem(key, JSON.stringify(value));
-}
-
-function getLocalStorageItem(key = keyName) {
-  return JSON.parse(localStorage.getItem(key));
-}
+const keyName = 'todoItems';
+const todoItems = getLocalStorageItem(keyName) || [];
 
 function createElement(tag, text) {
     const element = document.createElement(tag);
@@ -50,21 +45,24 @@ function render() {
     })
 }
 
-function clickAddButton() {
-    const text = input.value.trim()
-    input.value = ''
+function clickAddButton(e) {
+    e.preventDefault();
+    
+    const text = input.value.trim();
+    input.value = '';
 
     if (!text) {
-      return
+      return;
     }
 
-    todoItems.push(text)
-    setLocalStorageItem(keyName, todoItems)
-    render()
+    todoItems.push(text);
+    setLocalStorageItem(keyName, todoItems);
+    render();
 }
 
 function init() {
-    addBtn.addEventListener('click', () => clickAddButton())
+    addBtn.addEventListener('click', () => clickAddButton());
+    form.addEventListener('submit', clickAddButton);
 }
 
 init();

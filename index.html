@@ -5,11 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Todo List</title>
     <link href="css/style.css" rel="stylesheet">
-    <script src="js/main.js" defer></script>
+    <script src="js/utils.js" type="module" defer></script>
+    <script src="js/main.js" type="module" defer></script>
 </head>
 <body>
     <div class="wrapper">
-        <form onsubmit="clickAddButton(); return false;" class="todo">
+        <form class="todo" data-todo-form>
             <div class="todo__main-panel">
                 <p class="todo__description">Введите задачу:</p>
                 <input class="todo__input" type="text" placeholder="Текст задачи" data-todo-input>
