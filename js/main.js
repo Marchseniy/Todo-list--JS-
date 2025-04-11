@@ -46,7 +46,7 @@ function render() {
 }
 
 function clickAddButton(e) {
-    e.preventDefault();
+    e && e.preventDefault()
     
     const text = input.value.trim();
     input.value = '';
